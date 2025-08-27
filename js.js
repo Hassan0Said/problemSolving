@@ -1,105 +1,105 @@
 //Basic Mathematical Operations
-// function basic_op(operator, value1, value2) {
-//     if (typeof value1 !== 'number' || typeof value2 !== 'number') {
-//         console.log("Both values must be numbers.");
-//         return null;
-//     }
+function basic_op(operator, value1, value2) {
+    if (typeof value1 !== 'number' || typeof value2 !== 'number') {
+        console.log("Both values must be numbers.");
+        return null;
+    }
 
-//     switch (operator) {
-//         case '+':
-//             return value1 + value2;
-//             break;
-//         case '-':
-//             return value1 - value2;
-//             break;  
-//         case '*':
-//             return value1 * value2;
-//             break;
-//         case '/':
-//             if (value2 === 0) {
-//                 console.log("Division by zero is not allowed.");
-//                 return null;
-//             }
-//             else {
-//                 return value1 / value2;
-//             }
-//             break;
-//         default:
-//             console.log("Invalid operator. Please Enter +, -, *, or /.");
-//             return null;
-//     }
-// }
+    switch (operator) {
+        case '+':
+            return value1 + value2;
+            break;
+        case '-':
+            return value1 - value2;
+            break;  
+        case '*':
+            return value1 * value2;
+            break;
+        case '/':
+            if (value2 === 0) {
+                console.log("Division by zero is not allowed.");
+                return null;
+            }
+            else {
+                return value1 / value2;
+            }
+            break;
+        default:
+            console.log("Invalid operator. Please Enter +, -, *, or /.");
+            return null;
+    }
+}
 
-// let val1=parseFloat(prompt("Enter first value: "));
-// let op=prompt("Enter an operator (+, -, *, /): ");
-// let val2=prompt("Enter second value: ");
-// let result = basic_op(op, val1, val2);
-// if (result === null) {
-//     console.log("An error occurred during the operation.");
-// }
-// else {
-//     console.log(`The result of ${val1} ${op} ${val2} is: ${result}`);
-// }
+let val1=parseFloat(prompt("Enter first value: "));
+let op=prompt("Enter an operator (+, -, *, /): ");
+let val2=prompt("Enter second value: ");
+let result = basic_op(op, val1, val2);
+if (result === null) {
+    console.log("An error occurred during the operation.");
+}
+else {
+    console.log(`The result of ${val1} ${op} ${val2} is: ${result}`);
+}
 
 //====================================================================================================================================//
 
 //To Square Root or Not
-// function SquareRoot(array)
-// {
-//     return array.map(num => {
-//     if(typeof num !== 'number'){
-//         return null;
-//     }
-//     else if((Math.sqrt(num)* Math.sqrt(num)) === num){
-//         return Math.sqrt(num);
-//     }
-//     else{
-//         return Math.pow(num,2);
-//     }
+function SquareRoot(array)
+{
+    return array.map(num => {
+    if(typeof num !== 'number'){
+        return null;
+    }
+    else if((Math.sqrt(num)* Math.sqrt(num)) === num){
+        return Math.sqrt(num);
+    }
+    else{
+        return Math.pow(num,2);
+    }
         
-//     });
-// }
+    });
+}
 
-// let arr=[4, 7, 16, 5, 36 , 64, 81, 100];
-// let sqrtResult = SquareRoot(arr);
+let arr=[4, 7, 16, 5, 36 , 64, 81, 100];
+let sqrtResult = SquareRoot(arr);
 
-// if(sqrtResult === null || sqrtResult.includes(null)) {
-//     console.log("Error the all element of array must be numbers.");
-// }
-// else {
-//     console.log("The final array is:");
-//     sqrtResult.forEach((result, index) => {
-//         console.log(result+"\t");
-//     });
-// }
+if(sqrtResult === null || sqrtResult.includes(null)) {
+    console.log("Error the all element of array must be numbers.");
+}
+else {
+    console.log("The final array is:");
+    sqrtResult.forEach((result, index) => {
+        console.log(result+"\t");
+    });
+}
 
 //====================================================================================================================================//
 
 //Count By X
-// function countBy(x, n) {
-//     if (typeof x !== 'number' || typeof n !== 'number' || x <= 0 || n <= 0) {
-//         return [];
-//     }
+function countBy(x, n) {
+    if (typeof x !== 'number' || typeof n !== 'number' || x <= 0 || n <= 0) {
+        return [];
+    }
     
-//     let result = [];
-//     for (let i = 1; i <= n; i++) {
-//         result.push(i * x);
-//     }
-//     return result;
-// }
+    let result = [];
+    for (let i = 1; i <= n; i++) {
+        result.push(i * x);
+    }
+    return result;
+}
 
-// let x =prompt("Enter a positive number (x): ");
-// let n =prompt("Enter a positive number (n): ");
-// let countResult = countBy(x, n);
-//  if(countResult.length === 0) {
-//         console.log("Both x and n must be positive numbers.");
-//    }
-// else {
-//     console.log(`Multiplication product of ${x} for ${n} times:`);
-//     countResult.forEach((result, index) => {
-//         console.log(result + "\t");
-//     });
-// }
+let x =prompt("Enter a positive number (x): ");
+let n =prompt("Enter a positive number (n): ");
+let countResult = countBy(x, n);
+ if(countResult.length === 0) {
+        console.log("Both x and n must be positive numbers.");
+   }
+else {
+    console.log(`Multiplication product of ${x} for ${n} times:`);
+    countResult.forEach((result, index) => {
+        console.log(result + "\t");
+    });
+}
 
 //====================================================================================================================================//
 
@@ -122,41 +122,41 @@ else {
 
 //====================================================================================================================================//
 
-//Second Solution for Remove String Spaces(with Loop)
-// function noSpace(x) {
-//     let result = '';
-//     for (let i = 0; i < x.length; i++) {
-//         if (x[i] !== ' ') {
-//             result += x[i];
-//         }
-//     }
-//     return result;
-// }
+Second Solution for Remove String Spaces(with Loop)
+function noSpace(x) {
+    let result = '';
+    for (let i = 0; i < x.length; i++) {
+        if (x[i] !== ' ') {
+            result += x[i];
+        }
+    }
+    return result;
+}
 
-// let str = prompt("Enter a string with spaces: ");
-// let noSpaceResult = noSpace(str);
-// if (noSpaceResult === '') {
-//     console.log("The input must be a string.");
-// }
-// else {
-//     console.log(`String without spaces: ${noSpaceResult}`);
-// }
+let str = prompt("Enter a string with spaces: ");
+let noSpaceResult = noSpace(str);
+if (noSpaceResult === '') {
+    console.log("The input must be a string.");
+}
+else {
+    console.log(`String without spaces: ${noSpaceResult}`);
+}
 
 //====================================================================================================================================//
 
-//Third Solution for Remove String Spaces(with Split and Join)
-// function noSpace(x) {
-//     return x.split(' ').join('');
-// }
+Third Solution for Remove String Spaces(with Split and Join)
+function noSpace(x) {
+    return x.split(' ').join('');
+}
 
-// let str = prompt("Enter a string with spaces: ");
-// let noSpaceResult = noSpace(str);
-// if (noSpaceResult === '') {
-//     console.log("The input must be a string.");
-// }
-// else {
-//     console.log(`String without spaces: ${noSpaceResult}`);
-// }
+let str = prompt("Enter a string with spaces: ");
+let noSpaceResult = noSpace(str);
+if (noSpaceResult === '') {
+    console.log("The input must be a string.");
+}
+else {
+    console.log(`String without spaces: ${noSpaceResult}`);
+}
 
 //====================================================================================================================================//
 
@@ -189,5 +189,6 @@ function calc(arr) {
   return arr.length === 0 ? 0 : arr.reduce((acc, el) => acc + el, 0) / arr.length;
 }
 console.log(calc([10,20,30,40,50]));
+
 
 
