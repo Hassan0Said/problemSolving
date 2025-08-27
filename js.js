@@ -160,3 +160,34 @@ else {
 
 //====================================================================================================================================//
 
+//Reversing Words in a String
+let input = "I am here";
+let output = input.split(" ").reverse().join(" ");
+console.log(output);
+
+//====================================================================================================================================//
+
+//Keep Hydrated
+function liters(times){
+    return Math.floor(times*0.5);
+}
+console.log(liters(5));
+
+//====================================================================================================================================//
+
+//Convert a Number to a String
+function Convert(number){
+    //return String(number);
+    return number.toString();
+}
+console.log(Convert(10));
+
+//====================================================================================================================================//
+
+//Calculate Average
+function calc(arr) {
+  return arr.length === 0 ? 0 : arr.reduce((acc, el) => acc + el, 0) / arr.length;
+}
+console.log(calc([10,20,30,40,50]));
+
+
