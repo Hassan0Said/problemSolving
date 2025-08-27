@@ -122,7 +122,7 @@ else {
 
 //====================================================================================================================================//
 
-Second Solution for Remove String Spaces(with Loop)
+//Second Solution for Remove String Spaces(with Loop)
 function noSpace(x) {
     let result = '';
     for (let i = 0; i < x.length; i++) {
@@ -144,7 +144,7 @@ else {
 
 //====================================================================================================================================//
 
-Third Solution for Remove String Spaces(with Split and Join)
+//Third Solution for Remove String Spaces(with Split and Join)
 function noSpace(x) {
     return x.split(' ').join('');
 }
@@ -189,6 +189,7 @@ function calc(arr) {
   return arr.length === 0 ? 0 : arr.reduce((acc, el) => acc + el, 0) / arr.length;
 }
 console.log(calc([10,20,30,40,50]));
+
 
 
 
